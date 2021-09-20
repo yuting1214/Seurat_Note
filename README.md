@@ -14,8 +14,18 @@
   </p>
 </p>
 
+## Seurat object usage
 
-## Seurat object
+At the top level, the Seurat object serves as a collection of Assay and DimReduc objects, representing expression data and dimensionality reductions of the expression data, respectively. The Assay objects are designed to hold expression data of a single type, such as RNA-seq gene expression, CITE-seq ADTs, cell hashtags, or imputed gene values. DimReduc objects represent transformations of the data contained within the Assay object(s) via various dimensional reduction techniques such as PCA. For class-specific details, including more in depth description of the slots, please see the wiki sections for each class.
+
+## Slot data
+pbmc[["RNA"]]@counts
+pbmc[["RNA"]]@data # Normalized values are stored in here
+pbmc[["RNA"]]@scale.data # ScaleData
+
+## meta data (Cell-level meta data
+
+## Seurat object structure
 ```
 # Load the PBMC dataset
 pbmc.data <- Read10X(data.dir = "../data/pbmc3k/filtered_gene_bc_matrices/hg19/")
