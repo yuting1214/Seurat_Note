@@ -23,6 +23,8 @@ pbmc[["RNA"]]@counts
 pbmc[["RNA"]]@data # Normalized values are stored in here
 pbmc[["RNA"]]@scale.data # ScaleData
 
+- When running dimension reduction method, data must in ]@scale.data
+
 ## meta data (Cell-level meta data
 
 ## Seurat object structure
